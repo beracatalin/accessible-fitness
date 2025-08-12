@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Home.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/Home.css";
 
 const Home = () => {
   return (
@@ -8,7 +8,8 @@ const Home = () => {
       <section className="hero">
         <h1 className="hero-title">Accessible Fitness & Wellness</h1>
         <p className="hero-subtitle">
-          Your inclusive platform for adaptive workouts, wellness guides, and a supportive community.
+          Your inclusive platform for adaptive workouts, wellness guides, and a
+          supportive community.
         </p>
         <Link to="/register" className="hero-cta-button">
           Get Started
@@ -32,7 +33,8 @@ const Home = () => {
 
       <section className="testimonial">
         <blockquote>
-          "This platform changed how I see fitness — finally a place that works for me!"
+          "This platform changed how I see fitness — finally a place that works
+          for me!"
         </blockquote>
         <cite>- Happy Member</cite>
       </section>

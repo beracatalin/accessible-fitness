@@ -1,126 +1,122 @@
-/* Home.css */
-
-/* Root container */
 .home-container {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 1rem 1.5rem;
-  box-sizing: border-box;
+  padding: 2rem;
+  background: #f8f9fa;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text-color, #222);
-  background-color: var(--bg-color, #f9fafb);
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--primary-color, #0077cc);
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: var(--secondary-color, #444);
-  line-height: 1.4;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .hero-cta-button {
-  background-color: var(--primary-color, #0077cc);
+  display: inline-block;
+  background: #007bff;
   color: #fff;
   padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s, color 0.2s;
+  border: none;
 }
 
 .hero-cta-button:hover,
 .hero-cta-button:focus {
-  background-color: #005fa3;
-  outline: none;
+  background: #ffd700;
+  color: #222;
+  outline: 2px solid #222;
 }
 
-/* Features Section */
 .features {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .feature-card {
-  background-color: var(--card-bg, #fff);
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-  padding: 2rem 1.5rem;
-  flex: 1 1 280px;
-  max-width: 350px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  width: 260px;
   text-align: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.feature-card:hover,
-.feature-card:focus-within {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  color: #222;
 }
 
 .feature-card h2 {
-  margin-bottom: 1rem;
-  color: var(--primary-color, #0077cc);
-}
-
-/* Testimonial Section */
-.testimonial {
-  max-width: 600px;
-  margin: 0 auto;
-  font-style: italic;
-  color: var(--text-color, #555);
-  text-align: center;
-}
-
-.testimonial blockquote {
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.testimonial {
+  background: #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  color: #333;
+  margin-top: 2rem;
 }
 
 .testimonial cite {
-  font-weight: 600;
-  color: var(--primary-color, #0077cc);
-  font-size: 1rem;
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  color: #007bff;
+  font-weight: bold;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2rem;
-  }
+/* High Contrast Mode */
+.high-contrast .home-container {
+  background: #000 !important;
+  color: #fff !important;
+}
 
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+.high-contrast .hero-title,
+.high-contrast .hero-subtitle,
+.high-contrast .feature-card,
+.high-contrast .feature-card h2,
+.high-contrast .feature-card p,
+.high-contrast .testimonial,
+.high-contrast .testimonial cite {
+  color: #fff !important;
+  background: #000 !important;
+  border-color: #ffd700 !important;
+}
 
-  .hero-cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
+.high-contrast .hero-cta-button {
+  background: #ffd700 !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
 
-  .feature-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+.high-contrast .hero-cta-button:hover,
+.high-contrast .hero-cta-button:focus {
+  background: #222 !important;
+  color: #ffd700 !important;
+  outline: 2px solid #ffd700 !important;
 }

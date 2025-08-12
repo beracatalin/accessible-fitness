@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Login.css';
 
 const Login = () => {
   const { login } = useAuth();
@@ -22,15 +23,29 @@ const Login = () => {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: '2rem auto', padding: 16, border: '1px solid #ccc', borderRadius: 8 }}>
+    <div className="login-container">
       <h2>Login</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <label>Email</label><br />
-        <input type="email" required value={email} onChange={e => setEmail(e.target.value)} style={{ width: '100%', padding: 8, marginBottom: 12 }} />
-        <label>Password</label><br />
-        <input type="password" required value={password} onChange={e => setPassword(e.target.value)} style={{ width: '100%', padding: 8, marginBottom: 12 }} />
-        <button type="submit" style={{ padding: 12, width: '100%' }}>Log In</button>
+      <div aria-live="assertive" className="login-error">
+        {error}
+      </div>
+      <form onSubmit={handleSubmit} aria-label="Login form">
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          required
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          required
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+        <button type="submit">Log In</button>
       </form>
     </div>
   );

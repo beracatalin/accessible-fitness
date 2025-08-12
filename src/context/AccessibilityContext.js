@@ -1,21 +1,32 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const AccessibilityContext = createContext();
 
-export const AccessibilityProvider = ({ children }) => {
+export function AccessibilityProvider({ children }) {
   const [highContrast, setHighContrast] = useState(false);
-  const toggleContrast = () => setHighContrast(prev => !prev);
+
+  const toggleContrast = () => setHighContrast((prev) => !prev);
 
   return (
     <AccessibilityContext.Provider value={{ highContrast, toggleContrast }}>
-      <div style={{
-        backgroundColor: highContrast ? '#000' : '#fff',
-        color: highContrast ? '#fff' : '#000'
-      }}>
+      <div className={highContrast ? 'high-contrast' : ''}>
         {children}
       </div>
     </AccessibilityContext.Provider>
   );
-};
+}
 
-export const useAccessibility = () => useContext(AccessibilityContext);
+export function useAccessibility() {
+  return useContext(AccessibilityContext);
+}
+
+// Optional: HighContrastButton component
+export function HighContrastButton() {
+  const { highContrast, toggleContrast } = useAccessibility();
+
+  return (
+    <button className="contrast-btn" onClick={toggleContrast}>
+      {highContrast ? "Normal Mode" : "High Contrast"}
+    </button>
+  );
+}

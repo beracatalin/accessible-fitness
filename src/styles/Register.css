@@ -1,0 +1,88 @@
+.register-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.register-error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px;
+  width: 100%;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover,
+form button:focus {
+  background: #0077c0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* High Contrast Mode */
+.high-contrast .register-container {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #ffd700 !important;
+}
+
+.high-contrast .register-container h2,
+.high-contrast form label,
+.high-contrast .register-error {
+  color: #ffd700 !important;
+}
+
+.high-contrast form input {
+  background: #222 !important;
+  color: #ffd700 !important;
+  border: 1px solid #ffd700 !important;
+}
+
+.high-contrast form button {
+  background: #ffd700 !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+.high-contrast form button:hover,
+.high-contrast form button:focus {
+  background: #ffd700 !important;
+  color: #000 !important;
+  outline: 2px solid #fff !important;
+}
