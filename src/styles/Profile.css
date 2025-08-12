@@ -1,0 +1,467 @@
+.profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.profile-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.update-status {
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.update-status.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.update-status.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.profile-content {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Profile Information Section */
+.profile-info {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin: 0;
+}
+
+.edit-button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.edit-button:hover,
+.edit-button:focus {
+  background: #ffd700;
+  color: #222;
+  transform: translateY(-1px);
+  outline: 2px solid #222;
+}
+
+/* Profile Display */
+.profile-display {
+  margin-top: 1rem;
+}
+
+.info-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.info-item:hover,
+.info-item:focus-within {
+  border-color: #0077cc;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 500;
+}
+
+/* Profile Form */
+.profile-form {
+  margin-top: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label,
+.form-group legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group legend {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.1);
+}
+
+.form-group input[aria-invalid="true"] {
+  border-color: #dc3545;
+}
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Checkbox Groups */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-weight: 500;
+}
+
+.checkbox-label:hover,
+.checkbox-label:focus-within {
+  background-color: #f8f9fa;
+  border-color: #0077cc;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.save-button,
+.cancel-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-size: 1rem;
+}
+
+.save-button {
+  background: #28a745;
+  color: #fff;
+}
+
+.save-button:hover,
+.save-button:focus {
+  background: #218838;
+  transform: translateY(-1px);
+  outline: 2px solid #155724;
+}
+
+.save-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-button {
+  background: #6c757d;
+  color: #fff;
+}
+
+.cancel-button:hover,
+.cancel-button:focus {
+  background: #5a6268;
+  transform: translateY(-1px);
+  outline: 2px solid #343a40;
+}
+
+.cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Profile Stats Section */
+.profile-stats {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+
+.profile-stats h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.stat-card:hover,
+.stat-card:focus {
+  border-color: #0077cc;
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Loading and Error States */
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.error-message {
+  color: #dc3545;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+}
+
+/* High Contrast Mode */
+.high-contrast .profile-container {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .profile-info,
+.high-contrast .profile-stats {
+  background: #222 !important;
+  color: #fff !important;
+  border: 2px solid #ffd700 !important;
+}
+
+.high-contrast .profile-header h1,
+.high-contrast .section-header h2,
+.high-contrast .profile-stats h2,
+.high-contrast .info-label,
+.high-contrast .info-value,
+.high-contrast .stat-number,
+.high-contrast .stat-label {
+  color: #ffd700 !important;
+}
+
+.high-contrast .edit-button,
+.high-contrast .save-button,
+.high-contrast .cancel-button {
+  background: #ffd700 !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+.high-contrast .edit-button:hover,
+.high-contrast .edit-button:focus,
+.high-contrast .save-button:hover,
+.high-contrast .save-button:focus,
+.high-contrast .cancel-button:hover,
+.high-contrast .cancel-button:focus {
+  background: #000 !important;
+  color: #ffd700 !important;
+  outline: 2px solid #ffd700 !important;
+}
+
+.high-contrast .form-group input,
+.high-contrast .form-group select {
+  background: #333 !important;
+  color: #ffd700 !important;
+  border: 2px solid #ffd700 !important;
+}
+
+.high-contrast .form-group input:focus,
+.high-contrast .form-group select:focus {
+  border-color: #fff !important;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3) !important;
+}
+
+.high-contrast .info-item,
+.high-contrast .stat-card,
+.high-contrast .checkbox-label {
+  background: #333 !important;
+  border-color: #ffd700 !important;
+  color: #ffd700 !important;
+}
+
+.high-contrast .info-item:hover,
+.high-contrast .info-item:focus-within,
+.high-contrast .stat-card:hover,
+.high-contrast .stat-card:focus,
+.high-contrast .checkbox-label:hover,
+.high-contrast .checkbox-label:focus-within {
+  border-color: #fff !important;
+  background: #444 !important;
+}
+
+.high-contrast .update-status.success {
+  background: #ffd700 !important;
+  color: #000 !important;
+  border-color: #fff !important;
+}
+
+.high-contrast .update-status.error {
+  background: #ffd700 !important;
+  color: #000 !important;
+  border-color: #fff !important;
+}
+
+.high-contrast .field-error {
+  color: #ffd700 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
